@@ -1,0 +1,145 @@
+/*
+Theme Name: child-customizr
+Description: Child theme of Customizr
+Author: Rémi Moustey - OpenClassrooms
+Template: customizr
+*/
+
+nav
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav .fas
+{
+  display: flex;
+}
+
+.home_accueil
+{
+  align-items: center;
+}
+
+.home_accueil span
+{
+  font-family: "Source Sans Pro", Arial, sans-serif;
+}
+
+.mobile-navbar__wrapper
+{
+  display: none;
+}
+
+.primary-navbar__wrapper
+{
+  transform: none;
+}
+
+.primary-navbar__row
+{
+  position: fixed;
+  transform: none;
+  background-color: white;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding-top: 25px; /* Dans le cas où il y a la barre d'administration */
+}
+
+@keyframes slide_bloc {
+  0% {
+    transform: rotate(0px);
+  }
+ 
+  50% {
+    transform: rotate(30deg);
+  }
+  
+  100% {
+    transform: rotate(0px);
+  }
+}
+
+.animated_bloc:active
+{
+  animation: slide_bloc 0.3s;
+}
+
+.section-slider
+{
+  margin-top: 110px;
+}
+
+p
+{
+  text-align: justify;
+}
+
+.entry-header, .archive-header
+{
+  margin-top: 70px;
+}
+
+article .entry-content a[href="inscription"]
+{
+  padding: 10px;
+  background-color: #09DBF5;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+article .entry-content a[href="inscription"]:hover
+{
+  text-decoration: none;
+}
+
+tr:hover
+{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+td
+{
+  text-align: left;
+}
+
+@media all and (max-width: 768px)
+{
+  .mobile-navbar__wrapper
+  {
+    display: block;
+  }
+
+  .home_accueil .nav__title
+  {
+    font-family: "Source Sans Pro", Arial, sans-serif;
+  }
+
+  .container
+  {
+    background-color: white;
+  }
+
+  .primary-navbar__row, .branding-container, .primary-nav__menu, .regular-nav
+  {
+    display: none;
+  }
+  
+  #activities thead tr
+  {
+    display: none;
+  }
+  
+  #activities tbody tr
+  {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 5px;
+  }
+}
